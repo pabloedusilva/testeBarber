@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  :root {
+    /* Black + Gold palette */
+    --background: 0 0% 4%; /* near black */
+    --foreground: 0 0% 98%; /* near white */
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 45 85% 50%; /* gold */
+    --primary-foreground: 0 0% 8%; /* near black for contrast on gold */
+    --secondary: 0 0% 14%; /* dark gray */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 85% 50%;
+    --accent-foreground: 0 0% 8%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 16%;
+    --ring: 45 85% 50%; /* gold ring */
+    --chart-1: 45 85% 50%; /* gold */
+    --chart-2: 45 70% 40%; /* darker gold */
+    --chart-3: 35 65% 45%; /* amber */
+    --chart-4: 0 0% 60%;  /* gray */
+    --chart-5: 0 0% 85%;  /* light gray */
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 45 85% 50%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 45 85% 50%;
+  }
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 45 85% 50%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 85% 50%;
+    --accent-foreground: 0 0% 8%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 16%;
+    --ring: 45 85% 50%;
+    --chart-1: 45 85% 50%;
+    --chart-2: 45 70% 40%;
+    --chart-3: 35 65% 45%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 0 0% 85%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 45 85% 50%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 45 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+/* Transições simples */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Prevenir scroll horizontal */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
